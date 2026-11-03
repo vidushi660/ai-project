@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fox–Goose–Beans Crossing Planner: BFS & Rule-Based Planning</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="project-header">
+      </div>
+      <h1>Fox–Goose–Beans Crossing Planner</h1>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-container">
+    
+    <!-- Problem Overview Card -->
+    
+
+    <!-- Interactive River Visualization Section -->
+    <section class="card simulation-card">
+      <div class="card-header">
+        <h2>  River Crossing </h2>
+        <span id="game-status-pill" class="status-pill status-ready">Game Ready</span>
+      </div>
+
+      <!-- Live River Simulation Arena -->
+      <div class="river-stage">
+        <!-- Left Riverbank -->
+        <div class="riverbank left-bank" id="left-bank">
+          <div class="bank-header">
+            <h3>Left Bank (0)</h3>
+            <span class="bank-tag" id="left-count-tag">4 Entities</span>
+          </div>
+          <div class="entities-container" id="left-entities">
+            <!-- Entities dynamically rendered -->
+          </div>
+        </div>
+
+        <!-- The River & Animated Boat -->
+        <div class="river-area">
+          <div class="water-ripples">
+            <span class="wave"></span>
+            <span class="wave"></span>
+            <span class="wave"></span>
+          </div>
+
+          <!-- Boat Container -->
+          <div class="boat-lane">
+            <div class="boat boat-left" id="boat">
+              <div class="boat-hull">
+                <span class="boat-label">Boat</span>
+                <div class="boat-occupants" id="boat-occupants">
+                  <!-- Occupants dynamically rendered -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Riverbank -->
+        <div class="riverbank right-bank" id="right-bank">
+          <div class="bank-header">
+            <h3>Right Bank (1)</h3>
+            <span class="bank-tag" id="right-count-tag">0 Entities</span>
+          </div>
+          <div class="entities-container" id="right-entities">
+            <!-- Entities dynamically rendered -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Live AI Status Dashboard -->
+      <div class="dashboard-bar">
+        <div class="dash-item">
+          <span class="dash-label">Binary State (F, X, G, B)</span>
+          <span class="dash-value state-code" id="state-display">(0, 0, 0, 0)</span>
+        </div>
+        <div class="dash-item">
+          <span class="dash-label">Crossing Number</span>
+          <span class="dash-value" id="crossing-count">0</span>
+        </div>
+        <div class="dash-item">
+          <span class="dash-label">State Safety</span>
+          <span class="dash-value badge-safe" id="safety-indicator">🟢 Safe State</span>
+        </div>
+        <div class="dash-item">
+          <span class="dash-label">Goal Test Status</span>
+          <span class="dash-value" id="goal-indicator">⏳ In Progress</span>
+        </div>
+      </div>
+
+      <!-- Notification / Feedback Message Alert -->
+      <div class="alert-banner info-alert" id="status-message">
+        Welcome! Click <strong>"Start Game"</strong> to play manually.
+      </div>
+
+      <!-- Interactive Controls Panel -->
+      <div class="controls-section">
+        <div class="controls-group">
+          <h4 class="group-title"> Crossing Actions</h4>
+          <div class="buttons-grid">
+            <button id="btn-start" class="btn btn-primary"> Start Game</button>
+            <button id="btn-move-alone" class="btn btn-action" disabled> Move Farmer Alone</button>
+            <button id="btn-take-fox" class="btn btn-action" disabled> Take Fox</button>
+            <button id="btn-take-goose" class="btn btn-action" disabled> Take Goose</button>
+            <button id="btn-take-beans" class="btn btn-action" disabled> Take Beans</button>
+            <button id="btn-reset" class="btn btn-danger">Reset</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="project-footer">
+    <p>AI_Project: <strong>Fox–Goose–Beans Crossing Planner</strong>
+  
+  </footer>
+
+  <!-- Project Logic -->
+  <script src="script.js"></script>
+</body>
+</html>
